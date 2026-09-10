@@ -5,18 +5,20 @@ A Spring Boot application that processes payment messages from an in-memory queu
 ## Prerequisites
 
 - Java 17+
-- Maven 3.6+
+- No Maven install required — this repo includes the Maven Wrapper (`mvnw` / `mvnw.cmd`), which downloads the correct Maven version automatically.
 
 ## Build
 
 ```bash
-mvn clean install
+./mvnw clean install
 ```
+
+On Windows (Command Prompt / PowerShell), use `mvnw.cmd clean install` instead.
 
 ## Run
 
 ```bash
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
 
 The app will:
@@ -72,5 +74,5 @@ Config is in `src/main/resources/application.yml`.
 To override the port without editing the file:
 
 ```bash
-mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9090
+./mvnw spring-boot:run -Dspring-boot.run.arguments=--server.port=9090
 ```
